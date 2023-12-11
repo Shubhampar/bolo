@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-const FormRoutes= require("./Routes/FormsRoutes")
-const ResponseRoute= require("./Routes/ResponseRoute")
+const FormRoutes= require("./Routes/formRoutes")
+const ResponseRoute= require("./Routes/ResponseRoutes")
 
 app.use(cors())
 app.use(express.json())
