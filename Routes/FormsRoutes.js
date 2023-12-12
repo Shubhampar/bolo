@@ -1,6 +1,6 @@
 const express = require('express')
 const router= express.Router()
-const Form= require('../Models/formModels')
+const Form= require('../Models/FormsModel')
 
 // to get all data
 router.get('/',async (req,res)=>{

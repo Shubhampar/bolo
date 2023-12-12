@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-const FormRoutes= require("./Routes/formRoutes")
-const ResponseRoute= require("./Routes/ResponseRoutes")
+const FormRoutes= require("./Routes/FormsRoutes")
+const ResponseRoute= require("./Routes/ResponseRoute")
 
 app.use(cors())
 app.use(express.json())
@@ -14,15 +14,15 @@ app.use('/form',FormRoutes)
 app.use('/response',ResponseRoute)
 
 app.use('/',(req,res)=>{
-    res.send('Welcome to Bolo Forms Server!!')
+    res.send('Welcome to bolo forms api')
 })
 
 app.listen('8080',async ()=>{
-    console.log('Server Started');
+    console.log('server started');
     try {
         mongoose.connect(process.env.MONGODB_URL)
-        console.log('Database Connection Established')
+        console.log('database connection established')
     } catch (error) {
-        console.log('Error While Connecting Database ',error);
+        console.log('error while connecting database ',error);
     }
 })
