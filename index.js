@@ -14,15 +14,15 @@ app.use('/form',FormRoutes)
 app.use('/response',ResponseRoute)
 
 app.use('/',(req,res)=>{
-    res.send('Welcome to bolo forms api')
+    res.send(<h1>'Welcome to Bolo Forms Backend'</h1>)
 })
 
 app.listen('8080',async ()=>{
-    console.log('server started');
+    console.log('Server Connected');
     try {
         mongoose.connect(process.env.MONGODB_URL)
-        console.log('database connection established')
+        console.log('Database Connection Established')
     } catch (error) {
-        console.log('error while connecting database ',error);
+        console.log('Error While Connecting Catabase ',error);
     }
 })
