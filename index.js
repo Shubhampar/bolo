@@ -14,7 +14,8 @@ app.use('/form',FormRoutes)
 app.use('/response',ResponseRoute)
 
 app.use('/',(req,res)=>{
-    res.send(<h1>'Welcome to Bolo Forms Backend'</h1>)
+    // res.setHeader("Content-type", "text/html")
+    res.send("<h1>Welcome to Bolo Forms Backend</h1>")
 })
 
 app.listen('8080',async ()=>{
